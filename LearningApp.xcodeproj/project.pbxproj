@@ -16,6 +16,8 @@
 		16AA70F2275ECECB0066F7A0 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 16AA70F0275ECECB0066F7A0 /* data.json */; };
 		16AA70F3275ECECB0066F7A0 /* style.html in Resources */ = {isa = PBXBuildFile; fileRef = 16AA70F1275ECECB0066F7A0 /* style.html */; };
 		16AA70F5275ED0E50066F7A0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AA70F4275ED0E50066F7A0 /* Models.swift */; };
+		16AA70F7275F24B60066F7A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AA70F6275F24B60066F7A0 /* ContentView.swift */; };
+		16AA70F9275F2D470066F7A0 /* ContentViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AA70F8275F2D460066F7A0 /* ContentViewRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		16AA70F0275ECECB0066F7A0 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		16AA70F1275ECECB0066F7A0 /* style.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = style.html; sourceTree = "<group>"; };
 		16AA70F4275ED0E50066F7A0 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		16AA70F6275F24B60066F7A0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		16AA70F8275F2D460066F7A0 /* ContentViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 			children = (
 				16AA70DA275EC4EE0066F7A0 /* HomeView.swift */,
 				16AA70EB275EC5F70066F7A0 /* HomeViewRow.swift */,
+				16AA70F6275F24B60066F7A0 /* ContentView.swift */,
+				16AA70F8275F2D460066F7A0 /* ContentViewRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,7 +210,9 @@
 			files = (
 				16AA70DB275EC4EE0066F7A0 /* HomeView.swift in Sources */,
 				16AA70EE275EC6140066F7A0 /* ContentModel.swift in Sources */,
+				16AA70F7275F24B60066F7A0 /* ContentView.swift in Sources */,
 				16AA70D9275EC4EE0066F7A0 /* LearningApp.swift in Sources */,
+				16AA70F9275F2D470066F7A0 /* ContentViewRow.swift in Sources */,
 				16AA70EC275EC5F70066F7A0 /* HomeViewRow.swift in Sources */,
 				16AA70F5275ED0E50066F7A0 /* Models.swift in Sources */,
 			);

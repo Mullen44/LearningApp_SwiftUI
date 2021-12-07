@@ -40,6 +40,7 @@ struct HomeViewRow: View {
                     Text(description)
                         .padding(.bottom, 20)
                         .font(.caption)
+                        .multilineTextAlignment(.leading)
                     
                     // Icon
                     HStack {
@@ -67,7 +68,7 @@ struct HomeViewRow: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeViewRow_Previews: PreviewProvider {
     static var previews: some View {
         HomeViewRow(image: "swift", title: "Learn Swift", description: "some description", count: "20 Lessons", time: "2 hours")
     }
