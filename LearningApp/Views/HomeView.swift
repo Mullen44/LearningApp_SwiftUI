@@ -42,6 +42,7 @@ struct HomeView: View {
                 }// End ScrollView
             }.navigationTitle("Get Started")
         }
+        .navigationViewStyle(.stack)
     }
 }
     

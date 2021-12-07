@@ -17,14 +17,24 @@ struct ContentView: View {
                 // Confirm that current module is set
                 if model.currentModule != nil {
                     ForEach(0..<model.currentModule!.content.lessons.count){ index in
+                        NavigationLink {
+                            ContentDetailView()
+                                .onAppear(perform: {
+                                    model.beginLesson(index)
+                                })
+                        } label: {
+                            ContentViewRow(index:index)
+                        }
+
                         
-                        ContentViewRow(index:index)
                     }
                 }
 
             }
             .padding()
             .navigationTitle("Learn \(model.currentModule?.category ?? "")")
+            .accentColor(.black)
+            
         }
     }
 }
