@@ -20,6 +20,12 @@ class ContentModel: ObservableObject {
     @Published var currentLesson: Lessons?
     var currentLessonIndex = 0
     
+    // Current lesson explanation
+    @Published var lessonDescription = NSAttributedString()
+    
+    // current selected content and test
+    @Published var currentContentSelected: Int?
+    
     var styleData: Data?
     
     init() {
@@ -86,6 +92,7 @@ class ContentModel: ObservableObject {
         }
         // Set the lesson index
         currentLesson = currentModule!.content.lessons[currentLessonIndex]
+        lessonDescription = addStyling(currentLesson!.explanation)
         
         
     }
@@ -98,6 +105,7 @@ class ContentModel: ObservableObject {
         if  currentLessonIndex < currentModule!.content.lessons.count {
             // set the current lesson property
             currentLesson = currentModule!.content.lessons[currentLessonIndex]
+            lessonDescription = addStyling(currentLesson!.explanation)
         }
         else {
             // Reset the lesson state
@@ -109,6 +117,30 @@ class ContentModel: ObservableObject {
     
     func hasNextLesson() -> Bool {
         return currentLessonIndex + 1 < currentModule!.content.lessons.count
+    }
+    
+    // MARK: Code Styling
+    private func  addStyling(_ htmlString: String) -> NSAttributedString {
+        
+        var resultString = NSAttributedString()
+        var data = Data()
+        
+        // Add the styling data
+        if styleData != nil {
+            data.append(self.styleData!)
+        }
+        
+        // Add the html data
+        data.append(Data(htmlString.utf8))
+        
+        // Convert to attributed String
+            // Can use a do catch block if you take out the if and the question mark -> Used when you need to handle the error
+        if let attributedString = try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) {
+            resultString = attributedString
+        }
+        
+        return resultString
+
     }
 }
 

@@ -25,6 +25,8 @@ struct ContentDetailView: View {
             }
             // TODO: Description
             
+            CodeTextView()
+            
             // Next Lesson Button
             // Show only if it has a next lesson
             if model.hasNextLesson() {
@@ -35,11 +37,8 @@ struct ContentDetailView: View {
                     
                 } label: {
                     ZStack {
-                        Rectangle()
+                        RectangleCard(color: Color.green)
                             .frame(height:48)
-                            .foregroundColor(Color.green)
-                            .cornerRadius(10)
-                            .shadow(radius: 5)
 
                         Text("Next Lesson: \(model.currentModule!.content.lessons[model.currentLessonIndex + 1].title)")
                             .foregroundColor(.white)
@@ -47,8 +46,28 @@ struct ContentDetailView: View {
                     }
                 }
             }
+            else {
+                // Show Complete button
+                Button {
+                    
+                    // take user back to the home view
+                    model.currentContentSelected = nil
+                    
+                } label: {
+                    ZStack {
+                        RectangleCard(color: Color.green)
+                            .frame(height:48)
+
+                        Text("Complete")
+                            .foregroundColor(.white)
+                            .bold()
+                    }
+                }
+                
+            }
         }
         .padding(.horizontal, 20)
+        .navigationBarTitle(lesson?.title ?? "")
     }
 }
 
