@@ -23,6 +23,7 @@
 		16AA70FE275F32A40066F7A0 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16AA70FD275F32A40066F7A0 /* AVKit.framework */; };
 		16AA7100275F33C60066F7A0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AA70FF275F33C60066F7A0 /* Constants.swift */; };
 		16E9D7D32773CAF700F5288D /* RectangleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E9D7D22773CAF700F5288D /* RectangleCard.swift */; };
+		16E9D7DA2773D89000F5288D /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E9D7D92773D89000F5288D /* TestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		16AA70FD275F32A40066F7A0 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		16AA70FF275F33C60066F7A0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		16E9D7D22773CAF700F5288D /* RectangleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCard.swift; sourceTree = "<group>"; };
+		16E9D7D92773D89000F5288D /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +105,11 @@
 				16AA70DA275EC4EE0066F7A0 /* HomeView.swift */,
 				16AA70EB275EC5F70066F7A0 /* HomeViewRow.swift */,
 				16AA70F6275F24B60066F7A0 /* ContentView.swift */,
-				16E9D7D22773CAF700F5288D /* RectangleCard.swift */,
 				16AA70F8275F2D460066F7A0 /* ContentViewRow.swift */,
-				16527EFE276023C300A05694 /* CodeTextView.swift */,
 				16AA70FA275F2FB40066F7A0 /* ContentDetailView.swift */,
+				16E9D7D92773D89000F5288D /* TestView.swift */,
+				16E9D7D22773CAF700F5288D /* RectangleCard.swift */,
+				16527EFE276023C300A05694 /* CodeTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16E9D7DA2773D89000F5288D /* TestView.swift in Sources */,
 				16AA70DB275EC4EE0066F7A0 /* HomeView.swift in Sources */,
 				16AA70EE275EC6140066F7A0 /* ContentModel.swift in Sources */,
 				16AA70F7275F24B60066F7A0 /* ContentView.swift in Sources */,
