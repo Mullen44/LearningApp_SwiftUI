@@ -26,9 +26,11 @@ struct HomeView: View {
                                     destination:
                                         ContentView()
                                             .onAppear(perform: {
-                                            model.beginModule(module.id)
+                                                model.getLessons(module: module){
+                                                    model.beginModule(module.id)
+                                                }
                                             }),
-                                    tag: module.id,
+                                    tag: module.id.hash,
                                     selection: $model.currentContentSelected,
                                     label: {
                                         HomeViewRow(image: module.content.image, title: "Learn \(module.category)", description: module.content.description, count: "\(module.content.lessons.count) Lessons", time: module.content.time)
@@ -38,9 +40,11 @@ struct HomeView: View {
                                 NavigationLink(
                                     destination: TestView()
                                         .onAppear(perform: {
-                                            model.beginTest(module.id)
+                                            model.getQuestions(module: module) {
+                                                model.beginTest(module.id)
+                                            }
                                         }),
-                                    tag: module.id,
+                                    tag: module.id.hash,
                                     selection: $model.currentTestSelected,
                                     label: {
                                                     // Test Card
@@ -49,6 +53,7 @@ struct HomeView: View {
                                 })// End Navigation Link label
                                                
                             }// End VStack
+                            .padding(.bottom, 10)
                             
                             
                         }// End For Each
